@@ -1,97 +1,97 @@
 +++
-title = "Task 1.1: Truy cap bao mat den tai nguyen AWS"
+title = "Task 1.1: Truy cập bảo mật đến tài nguyên AWS"
 date = 2025
 weight = 1
 chapter = false
 pre = "<b>3.1 </b>"
 +++
 
-## Ly thuyet
+## Lý thuyết
 
 ### AWS Identity and Access Management (IAM)
 
-IAM la dich vu cot loi de quan ly truy cap den tai nguyen AWS. No cho phep ban kiem soat ai (xac thuc) co the lam gi (uy quyen) tren tai nguyen nao.
+IAM là dịch vụ cốt lõi để quản lý truy cập đến tài nguyên AWS. Nó cho phép bạn kiểm soát ai (xác thực) có thể làm gì (ủy quyền) trên tài nguyên nào.
 
-**Thanh phan chinh:**
+**Thành phần chính:**
 
-- **Users** — Danh tinh ca nhan voi thong tin xac thuc dai han
-- **Groups** — Tap hop users. Gan policies vao groups thay vi tung user
-- **Roles** — Danh tinh tam thoi duoc users, ung dung hoac dich vu AWS su dung
-- **Policies** — Tai lieu JSON dinh nghia quyen han
+- **Users** — Danh tính cá nhân với thông tin xác thực dài hạn
+- **Groups** — Tập hợp users. Gán policies vào groups thay vì từng user
+- **Roles** — Danh tính tạm thời được users, ứng dụng hoặc dịch vụ AWS sử dụng
+- **Policies** — Tài liệu JSON định nghĩa quyền hạn
 
-**Logic danh gia Policy:**
+**Logic đánh giá Policy:**
 
-1. Mac dinh, tat ca yeu cau bi tu choi (tu choi ngam dinh)
-2. Cho phep ro rang ghi de tu choi mac dinh
-3. Tu choi ro rang ghi de bat ky cho phep nao
+1. Mặc định, tất cả yêu cầu bị từ chối (từ chối ngầm định)
+2. Cho phép rõ ràng ghi đè từ chối mặc định
+3. Từ chối rõ ràng ghi đè bất kỳ cho phép nào
 
 ### Multi-Factor Authentication (MFA)
 
-MFA them lop xac thuc thu hai ngoai username va password.
+MFA thêm lớp xác thực thứ hai ngoài username và password.
 
-- **Virtual MFA** — Ung dung nhu Google Authenticator, Authy
-- **Hardware MFA** — Thiet bi vat ly
-- **U2F Security Key** — YubiKey hoac thiet bi USB tuong tu
+- **Virtual MFA** — Ứng dụng như Google Authenticator, Authy
+- **Hardware MFA** — Thiết bị vật lý
+- **U2F Security Key** — YubiKey hoặc thiết bị USB tương tự
 
 ### AWS Security Token Service (STS)
 
-STS cung cap thong tin xac thuc tam thoi, gioi han quyen cho IAM users hoac federated users.
+STS cung cấp thông tin xác thực tạm thời, giới hạn quyền cho IAM users hoặc federated users.
 
-- `AssumeRole` — Nhan vai tro IAM (cross-account hoac cung account)
-- `AssumeRoleWithSAML` — Nhan vai tro su dung SAML
-- `AssumeRoleWithWebIdentity` — Nhan vai tro su dung web identity token
-- `GetSessionToken` — Lay thong tin xac thuc tam thoi cho MFA
+- `AssumeRole` — Nhận vai trò IAM (cross-account hoặc cùng account)
+- `AssumeRoleWithSAML` — Nhận vai trò sử dụng SAML
+- `AssumeRoleWithWebIdentity` — Nhận vai trò sử dụng web identity token
+- `GetSessionToken` — Lấy thông tin xác thực tạm thời cho MFA
 
 ### Cross-Account Access
 
-Cho phep users trong mot tai khoan AWS truy cap tai nguyen trong tai khoan khac thong qua IAM roles.
+Cho phép users trong một tài khoản AWS truy cập tài nguyên trong tài khoản khác thông qua IAM roles.
 
 ### Service Control Policies (SCPs)
 
-SCPs la tinh nang cua AWS Organizations dat rao chan quyen han cho cac tai khoan thanh vien. SCPs KHONG cap quyen — chi gioi han nhung gi duoc phep.
+SCPs là tính năng của AWS Organizations đặt rào cản quyền hạn cho các tài khoản thành viên. SCPs KHÔNG cấp quyền — chỉ giới hạn những gì được phép.
 
 ### AWS Control Tower
 
-Tu dong hoa thiet lap va quan tri moi truong AWS nhieu tai khoan voi landing zone va guardrails.
+Tự động hóa thiết lập và quản trị môi trường AWS nhiều tài khoản với landing zone và guardrails.
 
 ### Resource Policies
 
-Policies gan truc tiep vao tai nguyen AWS (S3 bucket policies, SQS queue policies, v.v.)
+Policies gắn trực tiếp vào tài nguyên AWS (S3 bucket policies, SQS queue policies, v.v.)
 
 ### Federation
 
-Cho phep danh tinh ben ngoai truy cap tai nguyen AWS ma khong can tao IAM users. Su dung AWS IAM Identity Center, SAML 2.0, hoac Web Identity Federation.
+Cho phép danh tính bên ngoài truy cập tài nguyên AWS mà không cần tạo IAM users. Sử dụng AWS IAM Identity Center, SAML 2.0, hoặc Web Identity Federation.
 
 ---
 
 ## Flashcards
 
-| # | Cau hoi | Tra loi |
+| # | Câu hỏi | Trả lời |
 |---|---------|---------|
-| 1 | Hieu ung mac dinh cua IAM policies la gi? | Tat ca yeu cau bi tu choi ngam dinh |
-| 2 | Gi ghi de cho phep ro rang trong IAM? | Tu choi ro rang luon ghi de cho phep |
-| 3 | STS AssumeRole tra ve gi? | Access Key ID, Secret Access Key va Session Token tam thoi |
-| 4 | SCPs co cap quyen khong? | Khong, SCPs chi gioi han quyen |
-| 5 | Cach tot nhat de cap quyen cho EC2 truy cap S3? | Gan IAM role vao EC2 instance |
+| 1 | Hiệu ứng mặc định của IAM policies là gì? | Tất cả yêu cầu bị từ chối ngầm định |
+| 2 | Gì ghi đè cho phép rõ ràng trong IAM? | Từ chối rõ ràng luôn ghi đè cho phép |
+| 3 | STS AssumeRole trả về gì? | Access Key ID, Secret Access Key và Session Token tạm thời |
+| 4 | SCPs có cấp quyền không? | Không, SCPs chỉ giới hạn quyền |
+| 5 | Cách tốt nhất để cấp quyền cho EC2 truy cập S3? | Gán IAM role vào EC2 instance |
 
 ---
 
-## Cau hoi thi thu
+## Câu hỏi thi thử
 
-### Cau 1
+### Câu 1
 
-Mot cong ty co nhieu tai khoan AWS quan ly qua AWS Organizations. Doi bao mat muon dam bao khong IAM user nao co the tao access keys cho root user. Giai phap nao phu hop?
+Một công ty có nhiều tài khoản AWS quản lý qua AWS Organizations. Đội bảo mật muốn đảm bảo không IAM user nào có thể tạo access keys cho root user. Giải pháp nào phù hợp?
 
-- A) Tao IAM policy trong moi tai khoan tu choi tao root access key
-- B) Ap dung SCP tai organization root tu choi hanh dong `iam:CreateAccessKey` cho root user
-- C) Bat AWS Config rules de phat hien su dung root access key
-- D) Su dung CloudTrail de giam sat va canh bao
+- A) Tạo IAM policy trong mỗi tài khoản từ chối tạo root access key
+- B) Áp dụng SCP tại organization root từ chối hành động `iam:CreateAccessKey` cho root user
+- C) Bật AWS Config rules để phát hiện sử dụng root access key
+- D) Sử dụng CloudTrail để giám sát và cảnh báo
 
-<details><summary>Dap an</summary>
+<details><summary>Đáp án</summary>
 
-**Dung: B**
+**Đúng: B**
 
-SCPs la co che dung de thuc thi gioi han toan to chuc. SCP ap dung tai organization root anh huong tat ca tai khoan thanh vien.
+SCPs là cơ chế đúng để thực thi giới hạn toàn tổ chức. SCP áp dụng tại organization root ảnh hưởng tất cả tài khoản thành viên.
 
 **Domain:** 1
 **Task:** 1.1
@@ -100,7 +100,7 @@ SCPs la co che dung de thuc thi gioi han toan to chuc. SCP ap dung tai organizat
 
 ---
 
-## Tai lieu tham khao
+## Tài liệu tham khảo
 
 - [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
 - [AWS STS Documentation](https://docs.aws.amazon.com/STS/latest/APIReference/welcome.html)

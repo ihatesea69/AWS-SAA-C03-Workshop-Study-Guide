@@ -1,12 +1,12 @@
 +++
-title = "Task 3.2: Giai phap tinh toan hieu suat cao"
+title = "Task 3.2: Giải pháp tính toán hiệu suất cao"
 date = 2025
 weight = 2
 chapter = false
 pre = "<b>5.2 </b>"
 +++
 
-## Ly thuyet
+## Lý thuyết
 
 ### EC2 Instance Types
 - General Purpose (M, T), Compute Optimized (C), Memory Optimized (R, X), Storage Optimized (I, D), Accelerated (P, G)
@@ -16,32 +16,32 @@ pre = "<b>5.2 </b>"
 Target Tracking, Step, Scheduled, Predictive Scaling. Warm Pools cho scale-out nhanh.
 
 ### AWS Lambda
-Serverless, toi da 15 phut, 10 GB memory, 1000 concurrent. Provisioned Concurrency tranh cold starts.
+Serverless, tối đa 15 phút, 10 GB memory, 1000 concurrent. Provisioned Concurrency tránh cold starts.
 
 ### AWS Fargate
-Container serverless cho ECS/EKS. Khong quan ly EC2.
+Container serverless cho ECS/EKS. Không quản lý EC2.
 
 ### AWS Batch
-Xu ly batch quy mo lon. Tu dong provision EC2 hoac Fargate.
+Xử lý batch quy mô lớn. Tự động provision EC2 hoặc Fargate.
 
 ### Amazon EMR
-Big data (Hadoop, Spark). Chay tren EC2, EKS hoac serverless.
+Big data (Hadoop, Spark). Chạy trên EC2, EKS hoặc serverless.
 
 ---
 
 ## Flashcards
 
-| # | Cau hoi | Tra loi |
+| # | Câu hỏi | Trả lời |
 |---|---------|---------|
-| 1 | Lambda chay toi da bao lau? | 15 phut |
-| 2 | Instance family nao cho compute? | C family |
-| 3 | Provisioned Concurrency la gi? | Moi truong Lambda duoc lam nong truoc |
-| 4 | Ba loai placement group? | Cluster, Spread, Partition |
+| 1 | Lambda chạy tối đa bao lâu? | 15 phút |
+| 2 | Instance family nào cho compute? | C family |
+| 3 | Provisioned Concurrency là gì? | Môi trường Lambda được làm nóng trước |
+| 4 | Ba loại placement group? | Cluster, Spread, Partition |
 | 5 | ECS vs EKS? | ECS: AWS-native. EKS: Kubernetes. |
 
 ---
 
-## Tai lieu tham khao
+## Tài liệu tham khảo
 
 - [Amazon EC2 Instance Types](https://aws.amazon.com/ec2/instance-types/)
 - [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)

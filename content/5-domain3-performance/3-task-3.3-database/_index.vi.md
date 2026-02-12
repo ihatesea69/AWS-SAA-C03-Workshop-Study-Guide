@@ -1,41 +1,41 @@
 +++
-title = "Task 3.3: Giai phap co so du lieu hieu suat cao"
+title = "Task 3.3: Giải pháp cơ sở dữ liệu hiệu suất cao"
 date = 2025
 weight = 3
 chapter = false
 pre = "<b>5.3 </b>"
 +++
 
-## Ly thuyet
+## Lý thuyết
 
 ### Amazon RDS
-CSDL quan he duoc quan ly. Multi-AZ cho HA, Read Replicas cho hieu suat doc.
+CSDL quan hệ được quản lý. Multi-AZ cho HA, Read Replicas cho hiệu suất đọc.
 
 ### Amazon Aurora
-Tuong thich MySQL/PostgreSQL, hieu suat 5x MySQL. 15 read replicas, Aurora Serverless v2, Global Database.
+Tương thích MySQL/PostgreSQL, hiệu suất 5x MySQL. 15 read replicas, Aurora Serverless v2, Global Database.
 
 ### Amazon DynamoDB
-NoSQL key-value, do tre mili giay. On-Demand hoac Provisioned. DAX cho do tre micro giay.
+NoSQL key-value, độ trễ mili giây. On-Demand hoặc Provisioned. DAX cho độ trễ micro giây.
 
 ### Amazon ElastiCache
-- **Redis:** Persistence, replication, kieu du lieu phong phu
-- **Memcached:** Don gian, da luong, khong persistence
+- **Redis:** Persistence, replication, kiểu dữ liệu phong phú
+- **Memcached:** Đơn giản, đa luồng, không persistence
 
 ---
 
 ## Flashcards
 
-| # | Cau hoi | Tra loi |
+| # | Câu hỏi | Trả lời |
 |---|---------|---------|
-| 1 | Aurora co bao nhieu read replicas? | Toi da 15 |
-| 2 | DynamoDB DAX la gi? | Cache in-memory cho DynamoDB, do tre micro giay |
-| 3 | Redis vs Memcached? | Redis: persistence, replication. Memcached: don gian, da luong. |
-| 4 | Lazy Loading la gi? | Tai du lieu vao cache khi cache miss |
-| 5 | CSDL nao cho graph data? | Amazon Neptune |
+| 1 | Aurora có bao nhiêu read replicas? | Tối đa 15 |
+| 2 | DynamoDB DAX là gì? | Cache in-memory cho DynamoDB, độ trễ micro giây |
+| 3 | Redis vs Memcached? | Redis: persistence, replication. Memcached: đơn giản, đa luồng. |
+| 4 | Lazy Loading là gì? | Tải dữ liệu vào cache khi cache miss |
+| 5 | CSDL nào cho graph data? | Amazon Neptune |
 
 ---
 
-## Tai lieu tham khao
+## Tài liệu tham khảo
 
 - [Amazon Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)
 - [Amazon DynamoDB Developer Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html)

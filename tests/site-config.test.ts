@@ -53,7 +53,7 @@ describe('README.md', () => {
 
   it('README contains Hugo badge', () => {
     const content = readFileSync(resolve(ROOT, 'README.md'), 'utf-8');
-    expect(content).toContain('Built%20with-Hugo');
+    expect(content).toContain('Hugo-0.128.0');
   });
 
   it('README contains live demo link', () => {

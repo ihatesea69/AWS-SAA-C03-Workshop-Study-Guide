@@ -1,33 +1,33 @@
 +++
-title = "Domain 1: Thiet ke kien truc bao mat"
+title = "Domain 1: Thiết kế kiến trúc bảo mật"
 date = 2025
 weight = 3
 chapter = true
 pre = "<b>3. </b>"
 +++
 
-# Domain 1: Thiet ke kien truc bao mat
+# Domain 1: Thiết kế kiến trúc bảo mật
 
-## Trong so: 30% noi dung tinh diem
+## Trọng số: 30% nội dung tính điểm
 
-Day la domain co trong so cao nhat trong ky thi SAA-C03. No bao gom thiet ke truy cap bao mat den tai nguyen AWS, bao mat workloads va ung dung, va thuc hien cac kiem soat bao mat du lieu phu hop.
+Đây là domain có trọng số cao nhất trong kỳ thi SAA-C03. Nó bao gồm thiết kế truy cập bảo mật đến tài nguyên AWS, bảo mật workloads và ứng dụng, và thực hiện các kiểm soát bảo mật dữ liệu phù hợp.
 
-## Cac Task Statement
+## Các Task Statement
 
-| Task | Mo ta |
+| Task | Mô tả |
 |------|-------|
-| Task 1.1 | Thiet ke truy cap bao mat den tai nguyen AWS |
-| Task 1.2 | Thiet ke workloads va ung dung bao mat |
-| Task 1.3 | Xac dinh cac kiem soat bao mat du lieu phu hop |
+| Task 1.1 | Thiết kế truy cập bảo mật đến tài nguyên AWS |
+| Task 1.2 | Thiết kế workloads và ứng dụng bảo mật |
+| Task 1.3 | Xác định các kiểm soát bảo mật dữ liệu phù hợp |
 
-## Cac dich vu AWS chinh trong Domain nay
+## Các dịch vụ AWS chính trong Domain này
 
 - AWS Identity and Access Management (IAM)
 - AWS IAM Identity Center (SSO)
 - AWS Security Token Service (STS)
-- AWS Organizations va Control Tower
+- AWS Organizations và Control Tower
 - Amazon VPC (Security Groups, NACLs, NAT Gateways)
-- AWS Shield va AWS WAF
+- AWS Shield và AWS WAF
 - Amazon Cognito, GuardDuty, Macie
 - AWS KMS, ACM, Secrets Manager
-- AWS VPN va Direct Connect
+- AWS VPN và Direct Connect

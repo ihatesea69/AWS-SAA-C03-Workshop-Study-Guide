@@ -1,65 +1,65 @@
 +++
-title = "Bang so sanh"
+title = "Bảng so sánh"
 date = 2025
 weight = 7
 chapter = false
 pre = "<b>7. </b>"
 +++
 
-## Bang so sanh dich vu
+## Bảng so sánh dịch vụ
 
-Bang so sanh nhanh cho cac dich vu AWS thuong bi nham lan trong ky thi SAA-C03.
+Bảng so sánh nhanh cho các dịch vụ AWS thường bị nhầm lẫn trong kỳ thi SAA-C03.
 
 ### S3 vs EBS vs EFS
 
-| Tinh nang | S3 | EBS | EFS |
+| Tính năng | S3 | EBS | EFS |
 |-----------|-----|-----|-----|
-| Use Case | Luu tru doi tuong | Boot volumes, CSDL | He thong file chia se |
-| Pricing | Theo GB luu tru | Theo GB provision | Theo GB su dung |
-| Performance | 3,500 PUT / 5,500 GET | Toi da 256K IOPS | Throughput elastic |
-| Exam Tip | Mac dinh cho object storage | Gan vao 1 EC2 | NFS chia se multi-AZ |
+| Use Case | Lưu trữ đối tượng | Boot volumes, CSDL | Hệ thống file chia sẻ |
+| Pricing | Theo GB lưu trữ | Theo GB provision | Theo GB sử dụng |
+| Performance | 3,500 PUT / 5,500 GET | Tối đa 256K IOPS | Throughput elastic |
+| Exam Tip | Mặc định cho object storage | Gắn vào 1 EC2 | NFS chia sẻ multi-AZ |
 
 ### ALB vs NLB vs GLB
 
-| Tinh nang | ALB | NLB | GLB |
+| Tính năng | ALB | NLB | GLB |
 |-----------|-----|-----|-----|
-| Use Case | Web apps HTTP/HTTPS | TCP/UDP, do tre thap | Thiet bi bao mat |
+| Use Case | Web apps HTTP/HTTPS | TCP/UDP, độ trễ thấp | Thiết bị bảo mật |
 | Pricing | ~$0.0225/hr | ~$0.0225/hr | ~$0.0125/hr |
-| Exam Tip | Mac dinh cho web | Khi can IP tinh hoac TCP | Firewalls, IDS/IPS |
+| Exam Tip | Mặc định cho web | Khi cần IP tĩnh hoặc TCP | Firewalls, IDS/IPS |
 
 ### SQS vs SNS vs EventBridge
 
-| Tinh nang | SQS | SNS | EventBridge |
+| Tính năng | SQS | SNS | EventBridge |
 |-----------|-----|-----|-------------|
-| Use Case | Hang doi | Pub/sub fan-out | Dinh tuyen su kien |
-| Exam Tip | Tach roi thanh phan | Fan-out nhieu targets | Event-driven, SaaS |
+| Use Case | Hàng đợi | Pub/sub fan-out | Định tuyến sự kiện |
+| Exam Tip | Tách rời thành phần | Fan-out nhiều targets | Event-driven, SaaS |
 
 ### Security Groups vs NACLs
 
-| Tinh nang | Security Groups | NACLs |
+| Tính năng | Security Groups | NACLs |
 |-----------|----------------|-------|
-| Cap do | Instance | Subnet |
-| Trang thai | Stateful | Stateless |
-| Quy tac | Chi cho phep | Cho phep va tu choi |
+| Cấp độ | Instance | Subnet |
+| Trạng thái | Stateful | Stateless |
+| Quy tắc | Chỉ cho phép | Cho phép và từ chối |
 
 ### NAT Gateway vs NAT Instance
 
-| Tinh nang | NAT Gateway | NAT Instance |
+| Tính năng | NAT Gateway | NAT Instance |
 |-----------|-------------|--------------|
-| Chi phi | ~$32/thang | ~$3.80/thang (t3.nano) |
-| Exam Tip | Production | Dev/test tiet kiem |
+| Chi phí | ~$32/tháng | ~$3.80/tháng (t3.nano) |
+| Exam Tip | Production | Dev/test tiết kiệm |
 
 ### Direct Connect vs VPN
 
-| Tinh nang | Direct Connect | VPN |
+| Tính năng | Direct Connect | VPN |
 |-----------|---------------|-----|
-| Ma hoa | Khong mac dinh | Co |
-| Thiet lap | Tuan | Phut |
-| Exam Tip | Luu luong lon, on dinh | Luu luong thap, nhanh |
+| Mã hóa | Không mặc định | Có |
+| Thiết lập | Tuần | Phút |
+| Exam Tip | Lưu lượng lớn, ổn định | Lưu lượng thấp, nhanh |
 
 ### Reserved vs Savings Plans vs Spot
 
-| Tinh nang | Reserved | Savings Plans | Spot |
+| Tính năng | Reserved | Savings Plans | Spot |
 |-----------|----------|---------------|------|
-| Giam gia | Toi 72% | Toi 72% | Toi 90% |
-| Exam Tip | Steady-state | Linh hoat | Batch, chiu gian doan |
+| Giảm giá | Tới 72% | Tới 72% | Tới 90% |
+| Exam Tip | Steady-state | Linh hoạt | Batch, chịu gián đoạn |

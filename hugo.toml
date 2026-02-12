@@ -7,6 +7,7 @@ theme = "hugo-theme-learn"
   themeVariant = "workshop"
   disableBreadcrumb = false
   disableNextPrev = false
+  disableLandingPageButton = true
   editURL = "https://github.com/ihatesea69/AWS-SAA-C03-Workshop-Study-Guide/edit/main/content/"
   description = "Comprehensive AWS Solutions Architect Associate (SAA-C03) study guide — Theory, Hands-on Labs, Mock Exams, Cheat Sheets, Flashcards"
   author = "ihatesea69"
@@ -17,9 +18,9 @@ theme = "hugo-theme-learn"
     weight = 1
     languageName = "English"
   [languages.vi]
-    title = "Huong dan on thi AWS SAA-C03"
+    title = "Hướng dẫn ôn thi AWS SAA-C03"
     weight = 2
-    languageName = "Tieng Viet"
+    languageName = "Tiếng Việt"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

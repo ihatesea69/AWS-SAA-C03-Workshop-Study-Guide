@@ -1,56 +1,53 @@
 +++
-title = "Dieu kien tien quyet"
+title = "Điều kiện tiên quyết"
 date = 2025
 weight = 2
 chapter = false
 pre = "<b>2. </b>"
 +++
 
-## Dieu kien tien quyet
+# Điều kiện tiên quyết
 
-Truoc khi bat dau workshop nay, hay dam bao ban da thiet lap cac dieu sau.
+## Yêu cầu tài khoản AWS
 
-## Tai khoan AWS
+- Tài khoản AWS với quyền quản trị (Administrator Access)
+- Nên sử dụng tài khoản AWS Free Tier để thực hành
+- Bật MFA cho tài khoản root
 
-Ban can tai khoan AWS voi quyen quan tri de hoan thanh cac bai thuc hanh.
+## Công cụ cần thiết
 
-1. Truy cap [https://aws.amazon.com/](https://aws.amazon.com/) va nhan "Create an AWS Account"
-2. Lam theo quy trinh dang ky (can email, the tin dung va xac minh dien thoai)
-3. Dang nhap vao AWS Management Console tai [https://console.aws.amazon.com/](https://console.aws.amazon.com/)
+- **AWS CLI v2** — Giao diện dòng lệnh AWS
+- **Trình duyệt web** — Chrome, Firefox hoặc Edge phiên bản mới nhất
+- **Trình soạn thảo văn bản** — VS Code hoặc tương đương
 
-**Quan trong:** Mot so bai thuc hanh co the phat sinh chi phi nho. Luon lam theo huong dan don dep cuoi moi bai de tranh chi phi bat ngo. Hau het bai tap co the hoan thanh trong AWS Free Tier.
+## Cài đặt AWS CLI
 
-## Cong cu can thiet
+```bash
+# Windows
+msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 
-### AWS CLI
+# macOS
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+sudo installer -pkg AWSCLIV2.pkg -target /
 
-Cai dat AWS CLI v2 de chay cac lenh trong bai thuc hanh:
+# Linux
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+## Cấu hình AWS CLI
 
 ```bash
 aws configure
-# Nhap Access Key ID, Secret Access Key, region mac dinh (vd: us-east-1), va dinh dang output (json)
+# AWS Access Key ID: [Nhập Access Key]
+# AWS Secret Access Key: [Nhập Secret Key]
+# Default region name: ap-southeast-1
+# Default output format: json
 ```
 
-### Trinh duyet web
+## Kiến thức nền tảng
 
-Trinh duyet hien dai (Chrome, Firefox, Edge hoac Safari) de truy cap AWS Management Console.
-
-### Trinh soan thao
-
-Bat ky trinh soan thao nao de xem JSON policies va CloudFormation templates. Khuyen nghi dung VS Code.
-
-## Kien thuc khuyen nghi
-
-- Hieu biet co ban ve dien toan dam may
-- Quen thuoc voi cac khai niem mang co ban (dia chi IP, subnets, DNS, HTTP/HTTPS)
-- Hieu biet chung ve co so du lieu (quan he vs phi quan he)
-- Kinh nghiem co ban voi dong lenh
-
-## Canh bao chi phi
-
-Hau het bai thuc hanh co the hoan thanh trong Free Tier, nhung mot so bai tap co the phat sinh chi phi. Luon:
-
-1. Lam theo huong dan don dep sau moi bai thuc hanh
-2. Thiet lap AWS Budgets de theo doi chi tieu
-3. Kiem tra AWS Cost Explorer thuong xuyen
-4. Xoa tat ca tai nguyen da tao khi hoan thanh
+- Hiểu biết cơ bản về điện toán đám mây
+- Quen thuộc với các khái niệm mạng (TCP/IP, DNS, HTTP)
+- Kinh nghiệm cơ bản với Linux/Windows command line

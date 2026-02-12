@@ -1,128 +1,128 @@
 +++
-title = "De thi thu"
+title = "Đề thi thử"
 date = 2025
 weight = 9
 chapter = false
 pre = "<b>9. </b>"
 +++
 
-# De thi thu SAA-C03
+# Đề thi thử SAA-C03
 
-**Huong dan:** De thi thu nay co 65 cau hoi theo trong so domain giong ky thi SAA-C03 that. Hay chon dap an tot nhat cho moi cau hoi.
+**Hướng dẫn:** Đề thi thử này có 65 câu hỏi theo trọng số domain giống kỳ thi SAA-C03 thật. Hãy chọn đáp án tốt nhất cho mỗi câu hỏi.
 
-**Trong so Domain:**
-- Domain 1 (Bao mat): 20 cau hoi (30%)
-- Domain 2 (Phuc hoi): 17 cau hoi (26%)
-- Domain 3 (Hieu suat): 16 cau hoi (24%)
-- Domain 4 (Chi phi): 12 cau hoi (20%)
+**Trọng số Domain:**
+- Domain 1 (Bảo mật): 20 câu hỏi (30%)
+- Domain 2 (Phục hồi): 17 câu hỏi (26%)
+- Domain 3 (Hiệu suất): 16 câu hỏi (24%)
+- Domain 4 (Chi phí): 12 câu hỏi (20%)
 
-**Diem dat:** 720/1000 (khoang 47/65 cau dung)
-
----
-
-## Meo thi va Chien luoc
-
-### Quan ly thoi gian
-- Ban co 130 phut cho 65 cau hoi (2 phut/cau)
-- Danh dau cau kho va quay lai sau
-- Khong nen danh qua 3-4 phut cho 1 cau
-
-### Chien luoc tra loi
-- Doc ky cau hoi va xac dinh yeu cau chinh
-- Loai bo cac dap an sai ro rang truoc
-- Tim cac best practices va nguyen tac Well-Architected
-- Chon giai phap toi uu chi phi khi co nhieu lua chon
-
-### Cac bay thi thuong gap
-- **Over-engineering:** Chon giai phap don gian nhat dap ung yeu cau
-- **Chi phi vs Hieu suat:** Can bang dua tren trong tam cau hoi
-- **Bao mat:** Khi nghi ngo, chon tuy chon bao mat hon
-- **Managed vs Tu quan ly:** AWS uu tien dich vu managed
+**Điểm đạt:** 720/1000 (khoảng 47/65 câu đúng)
 
 ---
 
-## Cau hoi mau theo Domain
+## Mẹo thi và Chiến lược
 
-### Domain 1: Thiet ke kien truc bao mat
+### Quản lý thời gian
+- Bạn có 130 phút cho 65 câu hỏi (2 phút/câu)
+- Đánh dấu câu khó và quay lại sau
+- Không nên dành quá 3-4 phút cho 1 câu
 
-**Cau 1:** Cong ty can cap quyen truy cap tam thoi vao S3 bucket cho doi tac ben ngoai. Quyen truy cap chi gioi han vao cac object cu the va het han sau 2 gio. Cach nao an toan nhat?
+### Chiến lược trả lời
+- Đọc kỹ câu hỏi và xác định yêu cầu chính
+- Loại bỏ các đáp án sai rõ ràng trước
+- Tìm các best practices và nguyên tắc Well-Architected
+- Chọn giải pháp tối ưu chi phí khi có nhiều lựa chọn
 
-- A) Tao IAM users cho moi doi tac voi quyen S3
-- B) Tao pre-signed URLs voi thoi han 2 gio
-- C) Cong khai S3 bucket voi bucket policy theo thoi gian
-- D) Dung S3 Access Points voi thong tin xac thuc tam thoi
+### Các bẫy thi thường gặp
+- **Over-engineering:** Chọn giải pháp đơn giản nhất đáp ứng yêu cầu
+- **Chi phí vs Hiệu suất:** Cân bằng dựa trên trọng tâm câu hỏi
+- **Bảo mật:** Khi nghi ngờ, chọn tùy chọn bảo mật hơn
+- **Managed vs Tự quản lý:** AWS ưu tiên dịch vụ managed
 
-<details><summary>Dap an</summary>
+---
 
-**Dung: B**
+## Câu hỏi mẫu theo Domain
 
-Pre-signed URLs cung cap quyen truy cap tam thoi vao cac S3 objects cu the voi thoi han het han co the cau hinh. Khong can tao IAM users hoac cong khai buckets.
+### Domain 1: Thiết kế kiến trúc bảo mật
 
-**Domain:** 1 — Thiet ke kien truc bao mat
+**Câu 1:** Một công ty cần cấp quyền truy cập tạm thời vào S3 bucket cho đối tác bên ngoài. Quyền truy cập chỉ giới hạn vào các object cụ thể và hết hạn sau 2 giờ. Cách nào an toàn nhất?
+
+- A) Tạo IAM users cho mỗi đối tác với quyền S3
+- B) Tạo pre-signed URLs với thời hạn 2 giờ
+- C) Công khai S3 bucket với bucket policy theo thời gian
+- D) Dùng S3 Access Points với thông tin xác thực tạm thời
+
+<details><summary>Đáp án</summary>
+
+**Đúng: B**
+
+Pre-signed URLs cung cấp quyền truy cập tạm thời vào các S3 objects cụ thể với thời hạn hết hạn có thể cấu hình. Không cần tạo IAM users hoặc công khai buckets.
+
+**Domain:** 1 — Thiết kế kiến trúc bảo mật
 **Task:** 1.1
 
 </details>
 
-### Domain 2: Thiet ke kien truc phuc hoi
+### Domain 2: Thiết kế kiến trúc phục hồi
 
-**Cau 21:** Cong ty can tach roi he thong xu ly don hang de cac dot tang dot bien don hang khong lam qua tai backend. Ho nen dung pattern kien truc nao?
+**Câu 21:** Một công ty cần tách rời hệ thống xử lý đơn hàng để các đợt tăng đột biến đơn hàng không làm quá tải backend. Họ nên dùng pattern kiến trúc nào?
 
-- A) Goi API dong bo giua cac dich vu
-- B) SQS queue giua tiep nhan don hang va xu ly
-- C) Ghi truc tiep vao database tu frontend
-- D) He thong file chia se giua cac dich vu
+- A) Gọi API đồng bộ giữa các dịch vụ
+- B) SQS queue giữa tiếp nhận đơn hàng và xử lý
+- C) Ghi trực tiếp vào database từ frontend
+- D) Hệ thống file chia sẻ giữa các dịch vụ
 
-<details><summary>Dap an</summary>
+<details><summary>Đáp án</summary>
 
-**Dung: B**
+**Đúng: B**
 
-SQS cung cap loose coupling giua cac thanh phan, cho phep tiep nhan don hang tiep tuc nhan don trong khi backend xu ly theo toc do cua no. Dieu nay xu ly tot cac dot tang traffic.
+SQS cung cấp loose coupling giữa các thành phần, cho phép tiếp nhận đơn hàng tiếp tục nhận đơn trong khi backend xử lý theo tốc độ của nó. Điều này xử lý tốt các đợt tăng traffic.
 
-**Domain:** 2 — Thiet ke kien truc phuc hoi
+**Domain:** 2 — Thiết kế kiến trúc phục hồi
 **Task:** 2.1
 
 </details>
 
-### Domain 3: Kien truc hieu suat cao
+### Domain 3: Kiến trúc hiệu suất cao
 
-**Cau 38:** Cong ty can luu tru 100 TB du lieu se duoc truy cap thuong xuyen voi do tre thap. Ho nen dung S3 storage class nao?
+**Câu 38:** Một công ty cần lưu trữ 100 TB dữ liệu sẽ được truy cập thường xuyên với độ trễ thấp. Họ nên dùng S3 storage class nào?
 
 - A) S3 Standard
 - B) S3 Intelligent-Tiering
 - C) S3 Standard-IA
 - D) S3 Glacier
 
-<details><summary>Dap an</summary>
+<details><summary>Đáp án</summary>
 
-**Dung: A**
+**Đúng: A**
 
-S3 Standard cung cap do tre thap va throughput cao cho du lieu truy cap thuong xuyen. Intelligent-Tiering them overhead cho phan tich access pattern. IA va Glacier danh cho truy cap khong thuong xuyen.
+S3 Standard cung cấp độ trễ thấp và throughput cao cho dữ liệu truy cập thường xuyên. Intelligent-Tiering thêm overhead cho phân tích access pattern. IA và Glacier dành cho truy cập không thường xuyên.
 
-**Domain:** 3 — Kien truc hieu suat cao
+**Domain:** 3 — Kiến trúc hiệu suất cao
 **Task:** 3.1
 
 </details>
 
-### Domain 4: Toi uu chi phi
+### Domain 4: Tối ưu chi phí
 
-**Cau 54:** Cong ty chay EC2 instances 24/7 cho workload production. Ho muon giam chi phi. Tuy chon mua nao tiet kiem nhat?
+**Câu 54:** Một công ty chạy EC2 instances 24/7 cho workload production. Họ muốn giảm chi phí. Tùy chọn mua nào tiết kiệm nhất?
 
 - A) On-Demand Instances
 - B) Spot Instances
-- C) Reserved Instances hoac Savings Plans
+- C) Reserved Instances hoặc Savings Plans
 - D) Dedicated Hosts
 
-<details><summary>Dap an</summary>
+<details><summary>Đáp án</summary>
 
-**Dung: C**
+**Đúng: C**
 
-Reserved Instances va Savings Plans giam toi 72% cho workloads on dinh. Spot re hon nhung co the bi gian doan. On-Demand la gia day du. Dedicated Hosts danh cho compliance.
+Reserved Instances và Savings Plans giảm tới 72% cho workloads ổn định. Spot rẻ hơn nhưng có thể bị gián đoạn. On-Demand là giá đầy đủ. Dedicated Hosts dành cho compliance.
 
-**Domain:** 4 — Toi uu chi phi
+**Domain:** 4 — Tối ưu chi phí
 **Task:** 4.2
 
 </details>
 
 ---
 
-*Xem phien ban tieng Anh de co day du 65 cau hoi.*
+*Xem phiên bản tiếng Anh để có đầy đủ 65 câu hỏi.*

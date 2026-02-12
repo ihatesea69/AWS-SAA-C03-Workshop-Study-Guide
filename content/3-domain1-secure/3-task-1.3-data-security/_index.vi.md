@@ -1,62 +1,62 @@
 +++
-title = "Task 1.3: Kiem soat bao mat du lieu"
+title = "Task 1.3: Kiểm soát bảo mật dữ liệu"
 date = 2025
 weight = 3
 chapter = false
 pre = "<b>3.3 </b>"
 +++
 
-## Ly thuyet
+## Lý thuyết
 
-### Ma hoa tai cho — AWS KMS
+### Mã hóa tại chỗ — AWS KMS
 
-AWS KMS la dich vu trung tam de quan ly khoa ma hoa.
+AWS KMS là dịch vụ trung tâm để quản lý khóa mã hóa.
 
-**Loai khoa:**
-- **AWS Managed Keys** — AWS tao va quan ly. Mien phi, tu dong xoay vong hang nam.
-- **Customer Managed Keys (CMKs)** — Ban tao va quan ly. $1/thang moi khoa.
-- **AWS Owned Keys** — AWS su dung noi bo. Khong hien thi trong tai khoan ban.
+**Loại khóa:**
+- **AWS Managed Keys** — AWS tạo và quản lý. Miễn phí, tự động xoay vòng hàng năm.
+- **Customer Managed Keys (CMKs)** — Bạn tạo và quản lý. $1/tháng mỗi khóa.
+- **AWS Owned Keys** — AWS sử dụng nội bộ. Không hiển thị trong tài khoản bạn.
 
-**Envelope Encryption:** KMS ma hoa data key, data key ma hoa du lieu cua ban.
+**Envelope Encryption:** KMS mã hóa data key, data key mã hóa dữ liệu của bạn.
 
-### Ma hoa khi truyen — ACM va TLS
+### Mã hóa khi truyền — ACM và TLS
 
-AWS Certificate Manager (ACM) quan ly chung chi SSL/TLS.
-- Chung chi cong khai: Mien phi, tu dong gia han
-- Diem ket thuc TLS: ALB, CloudFront, API Gateway
+AWS Certificate Manager (ACM) quản lý chứng chỉ SSL/TLS.
+- Chứng chỉ công khai: Miễn phí, tự động gia hạn
+- Điểm kết thúc TLS: ALB, CloudFront, API Gateway
 
-### Sao luu va Nhan ban du lieu
+### Sao lưu và Nhân bản dữ liệu
 
-- **AWS Backup** — Dich vu sao luu tap trung
-- **S3 CRR** — Nhan ban cross-region
-- **Backup Vault Lock** — Tuan thu WORM
+- **AWS Backup** — Dịch vụ sao lưu tập trung
+- **S3 CRR** — Nhân bản cross-region
+- **Backup Vault Lock** — Tuân thủ WORM
 
-### Vong doi du lieu
+### Vòng đời dữ liệu
 
-- **S3 Lifecycle Policies** — Chuyen doi storage classes
-- **S3 Object Lock** — Ngan xoa doi tuong
-- **S3 Versioning** — Bao ve chong xoa nham
+- **S3 Lifecycle Policies** — Chuyển đổi storage classes
+- **S3 Object Lock** — Ngăn xóa đối tượng
+- **S3 Versioning** — Bảo vệ chống xóa nhầm
 
-### Xoay vong khoa va Gia han chung chi
+### Xoay vòng khóa và Gia hạn chứng chỉ
 
-- KMS tu dong xoay vong: Hang nam
-- ACM tu dong gia han chung chi cong khai
+- KMS tự động xoay vòng: Hàng năm
+- ACM tự động gia hạn chứng chỉ công khai
 
 ---
 
 ## Flashcards
 
-| # | Cau hoi | Tra loi |
+| # | Câu hỏi | Trả lời |
 |---|---------|---------|
-| 1 | Ba loai khoa KMS la gi? | AWS Managed, Customer Managed, AWS Owned |
-| 2 | Envelope encryption la gi? | KMS ma hoa data key, data key ma hoa du lieu |
-| 3 | Chung chi ACM cong khai co mien phi khong? | Co, va tu dong gia han |
-| 4 | S3 Object Lock la gi? | Tuan thu WORM ngan xoa doi tuong |
-| 5 | Co the ma hoa RDS instance hien tai khong? | Khong. Phai tao snapshot ma hoa roi restore instance moi |
+| 1 | Ba loại khóa KMS là gì? | AWS Managed, Customer Managed, AWS Owned |
+| 2 | Envelope encryption là gì? | KMS mã hóa data key, data key mã hóa dữ liệu |
+| 3 | Chứng chỉ ACM công khai có miễn phí không? | Có, và tự động gia hạn |
+| 4 | S3 Object Lock là gì? | Tuân thủ WORM ngăn xóa đối tượng |
+| 5 | Có thể mã hóa RDS instance hiện tại không? | Không. Phải tạo snapshot mã hóa rồi restore instance mới |
 
 ---
 
-## Tai lieu tham khao
+## Tài liệu tham khảo
 
 - [AWS KMS Developer Guide](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html)
 - [AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html)

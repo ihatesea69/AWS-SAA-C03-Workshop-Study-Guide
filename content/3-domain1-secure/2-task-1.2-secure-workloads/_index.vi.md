@@ -1,73 +1,73 @@
 +++
-title = "Task 1.2: Bao mat Workloads va Ung dung"
+title = "Task 1.2: Bảo mật Workloads và Ứng dụng"
 date = 2025
 weight = 2
 chapter = false
 pre = "<b>3.2 </b>"
 +++
 
-## Ly thuyet
+## Lý thuyết
 
-### Thanh phan bao mat VPC
+### Thành phần bảo mật VPC
 
-Amazon VPC cung cap nhieu lop bao mat mang.
+Amazon VPC cung cấp nhiều lớp bảo mật mạng.
 
 ### Security Groups (Stateful)
 
-- Tuong lua ao o **cap instance** (ENI)
-- **Stateful:** Neu luu luong vao duoc phep, phan hoi tu dong duoc phep
-- Chi ho tro **quy tac cho phep** (khong co quy tac tu choi)
+- Tường lửa ảo ở **cấp instance** (ENI)
+- **Stateful:** Nếu lưu lượng vào được phép, phản hồi tự động được phép
+- Chỉ hỗ trợ **quy tắc cho phép** (không có quy tắc từ chối)
 
 ### Network ACLs (Stateless)
 
-- Tuong lua o **cap subnet**
-- **Stateless:** Luu luong tra ve phai duoc cho phep ro rang
-- Ho tro ca **quy tac cho phep va tu choi**
-- Quy tac duoc danh gia theo thu tu so (thap nhat truoc)
+- Tường lửa ở **cấp subnet**
+- **Stateless:** Lưu lượng trả về phải được cho phép rõ ràng
+- Hỗ trợ cả **quy tắc cho phép và từ chối**
+- Quy tắc được đánh giá theo thứ tự số (thấp nhất trước)
 
 ### NAT Gateways
 
-Cho phep instances trong private subnets truy cap internet ma khong bi truy cap tu internet.
+Cho phép instances trong private subnets truy cập internet mà không bị truy cập từ internet.
 
 ### AWS Shield
 
-- **Standard:** Mien phi, bao ve DDoS Layer 3/4
-- **Advanced:** $3,000/thang, bao ve nang cao, DRT 24/7
+- **Standard:** Miễn phí, bảo vệ DDoS Layer 3/4
+- **Advanced:** $3,000/tháng, bảo vệ nâng cao, DRT 24/7
 
 ### AWS WAF
 
-Bao ve chong SQL injection, XSS tai Layer 7. Trien khai tren CloudFront, ALB, API Gateway.
+Bảo vệ chống SQL injection, XSS tại Layer 7. Triển khai trên CloudFront, ALB, API Gateway.
 
 ### AWS Secrets Manager
 
-Luu tru va tu dong xoay vong secrets (database credentials, API keys).
+Lưu trữ và tự động xoay vòng secrets (database credentials, API keys).
 
-### VPN va Direct Connect
+### VPN và Direct Connect
 
-- **Site-to-Site VPN:** Ket noi ma hoa qua internet cong cong
-- **Direct Connect:** Ket noi rieng chuyen dung, khong ma hoa mac dinh
+- **Site-to-Site VPN:** Kết nối mã hóa qua internet công cộng
+- **Direct Connect:** Kết nối riêng chuyên dụng, không mã hóa mặc định
 
 ### Amazon Cognito, GuardDuty, Macie
 
-- **Cognito:** Xac thuc nguoi dung (User Pools) va uy quyen (Identity Pools)
-- **GuardDuty:** Phat hien moi de doa thong minh
-- **Macie:** Phat hien du lieu nhay cam trong S3
+- **Cognito:** Xác thực người dùng (User Pools) và ủy quyền (Identity Pools)
+- **GuardDuty:** Phát hiện mối đe dọa thông minh
+- **Macie:** Phát hiện dữ liệu nhạy cảm trong S3
 
 ---
 
 ## Flashcards
 
-| # | Cau hoi | Tra loi |
+| # | Câu hỏi | Trả lời |
 |---|---------|---------|
-| 1 | Security Groups la stateful hay stateless? | Stateful |
-| 2 | NACLs la stateful hay stateless? | Stateless |
-| 3 | AWS WAF trien khai o dau? | CloudFront, ALB, API Gateway, AppSync |
-| 4 | Direct Connect co ma hoa mac dinh khong? | Khong. Can them VPN de ma hoa. |
-| 5 | Macie phat hien gi? | Du lieu nhay cam trong S3 (PII, du lieu tai chinh) |
+| 1 | Security Groups là stateful hay stateless? | Stateful |
+| 2 | NACLs là stateful hay stateless? | Stateless |
+| 3 | AWS WAF triển khai ở đâu? | CloudFront, ALB, API Gateway, AppSync |
+| 4 | Direct Connect có mã hóa mặc định không? | Không. Cần thêm VPN để mã hóa. |
+| 5 | Macie phát hiện gì? | Dữ liệu nhạy cảm trong S3 (PII, dữ liệu tài chính) |
 
 ---
 
-## Tai lieu tham khao
+## Tài liệu tham khảo
 
 - [Amazon VPC User Guide](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
 - [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html)

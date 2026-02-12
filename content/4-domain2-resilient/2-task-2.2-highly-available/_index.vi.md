@@ -1,55 +1,55 @@
 +++
-title = "Task 2.2: Kien truc san sang cao va chiu loi"
+title = "Task 2.2: Kiến trúc sẵn sàng cao và chịu lỗi"
 date = 2025
 weight = 2
 chapter = false
 pre = "<b>4.2 </b>"
 +++
 
-## Ly thuyet
+## Lý thuyết
 
-### Ha tang toan cau AWS
-- **Regions:** Khu vuc dia ly voi 2+ AZs
-- **Availability Zones:** Trung tam du lieu rieng biet voi nguon dien va mang du phong
+### Hạ tầng toàn cầu AWS
+- **Regions:** Khu vực địa lý với 2+ AZs
+- **Availability Zones:** Trung tâm dữ liệu riêng biệt với nguồn điện và mạng dự phòng
 
 ### Amazon Route 53
-Dich vu DNS voi health checking va cac chinh sach dinh tuyen: Simple, Weighted, Latency, Failover, Geolocation, Multi-value.
+Dịch vụ DNS với health checking và các chính sách định tuyến: Simple, Weighted, Latency, Failover, Geolocation, Multi-value.
 
-### Chien luoc Disaster Recovery
+### Chiến lược Disaster Recovery
 
-| Chien luoc | RPO | RTO | Chi phi |
+| Chiến lược | RPO | RTO | Chi phí |
 |------------|-----|-----|---------|
-| Backup and Restore | Gio | Gio | Thap nhat |
-| Pilot Light | Phut | Chuc phut | Thap |
-| Warm Standby | Giay-Phut | Phut | Trung binh |
-| Active-Active | Gan bang 0 | Gan bang 0 | Cao nhat |
+| Backup and Restore | Giờ | Giờ | Thấp nhất |
+| Pilot Light | Phút | Chục phút | Thấp |
+| Warm Standby | Giây-Phút | Phút | Trung bình |
+| Active-Active | Gần bằng 0 | Gần bằng 0 | Cao nhất |
 
 ### RDS High Availability
-- **Multi-AZ:** Nhan ban dong bo, failover tu dong 1-2 phut
-- **Aurora:** 6 ban sao tren 3 AZs, failover duoi 30 giay
-- **Aurora Global Database:** RPO 1 giay, RTO duoi 1 phut
+- **Multi-AZ:** Nhân bản đồng bộ, failover tự động 1-2 phút
+- **Aurora:** 6 bản sao trên 3 AZs, failover dưới 30 giây
+- **Aurora Global Database:** RPO 1 giây, RTO dưới 1 phút
 
 ### Amazon RDS Proxy
-Gom nhom ket noi database, giam thoi gian failover 66%, ho tro IAM auth.
+Gộp nhóm kết nối database, giảm thời gian failover 66%, hỗ trợ IAM auth.
 
 ### Immutable Infrastructure
-Thay the instances thay vi cap nhat tai cho. Su dung AMIs va Auto Scaling.
+Thay thế instances thay vì cập nhật tại chỗ. Sử dụng AMIs và Auto Scaling.
 
 ---
 
 ## Flashcards
 
-| # | Cau hoi | Tra loi |
+| # | Câu hỏi | Trả lời |
 |---|---------|---------|
-| 1 | RPO va RTO khac nhau the nao? | RPO: mat du lieu toi da. RTO: thoi gian ngung toi da. |
-| 2 | Chien luoc DR nao re nhat? | Backup and Restore |
-| 3 | Co the doc tu RDS Multi-AZ standby khong? | Khong. Chi dung cho failover. |
-| 4 | Aurora luu bao nhieu ban sao du lieu? | 6 ban sao tren 3 AZs |
-| 5 | RDS Proxy lam gi? | Gom nhom ket noi, giam failover 66% |
+| 1 | RPO và RTO khác nhau thế nào? | RPO: mất dữ liệu tối đa. RTO: thời gian ngừng tối đa. |
+| 2 | Chiến lược DR nào rẻ nhất? | Backup and Restore |
+| 3 | Có thể đọc từ RDS Multi-AZ standby không? | Không. Chỉ dùng cho failover. |
+| 4 | Aurora lưu bao nhiêu bản sao dữ liệu? | 6 bản sao trên 3 AZs |
+| 5 | RDS Proxy làm gì? | Gộp nhóm kết nối, giảm failover 66% |
 
 ---
 
-## Tai lieu tham khao
+## Tài liệu tham khảo
 
 - [Amazon Route 53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html)
 - [AWS Disaster Recovery Whitepaper](https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-workloads-on-aws.html)

@@ -1,92 +1,92 @@
 +++
-title = "Tai nguyen va Tham khao"
+title = "Tài nguyên và Tham khảo"
 date = 2025
 weight = 11
 chapter = false
 pre = "<b>11. </b>"
 +++
 
-# Tai nguyen va Tham khao bo sung
+# Tài nguyên và Tham khảo bổ sung
 
-## Tai lieu AWS chinh thuc
+## Tài liệu AWS chính thức
 
-### Tai lieu dich vu chinh
+### Tài liệu dịch vụ chính
 - [Amazon EC2 User Guide](https://docs.aws.amazon.com/ec2/)
 - [Amazon S3 User Guide](https://docs.aws.amazon.com/s3/)
 - [Amazon VPC User Guide](https://docs.aws.amazon.com/vpc/)
 - [AWS IAM User Guide](https://docs.aws.amazon.com/iam/)
 - [Amazon RDS User Guide](https://docs.aws.amazon.com/rds/)
 
-### AWS Whitepapers (Doc bat buoc)
+### AWS Whitepapers (Đọc bắt buộc)
 - [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
 - [AWS Security Best Practices](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html)
 - [Cost Optimization Pillar](https://docs.aws.amazon.com/wellarchitected/latest/cost-optimization-pillar/welcome.html)
 - [Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html)
 
-## Nha cung cap de thi thu
+## Nhà cung cấp đề thi thử
 
-### Nen tang khuyen nghi
-- **AWS Skill Builder** — De thi thu chinh thuc AWS
-- **Tutorials Dojo** — De thi thu chat luong cao
-- **Whizlabs** — De thi va bai thuc hanh
-- **A Cloud Guru** — Khoa hoc toan dien voi labs
+### Nền tảng khuyến nghị
+- **AWS Skill Builder** — Đề thi thử chính thức AWS
+- **Tutorials Dojo** — Đề thi thử chất lượng cao
+- **Whizlabs** — Đề thi và bài thực hành
+- **A Cloud Guru** — Khóa học toàn diện với labs
 
-### Meo de thi thu
-- Lam nhieu de thi tu cac nha cung cap khac nhau
-- Tap trung hieu giai thich, khong chi thuoc dap an
-- Xac dinh diem yeu va on lai cac chu de tuong ung
-- Muc tieu dat diem tren 80% truoc khi thi that
+### Mẹo đề thi thử
+- Làm nhiều đề thi từ các nhà cung cấp khác nhau
+- Tập trung hiểu giải thích, không chỉ thuộc đáp án
+- Xác định điểm yếu và ôn lại các chủ đề tương ứng
+- Mục tiêu đạt điểm trên 80% trước khi thi thật
 
-## Khoa hoc truc tuyen
+## Khóa học trực tuyến
 
-### Khoa hoc video
-- **AWS Skill Builder** — Khoa hoc mien phi va tra phi tu AWS
-- **A Cloud Guru** — Khoa hoc SAA-C03 toan dien
-- **Udemy** — Khoa hoc AWS cua Stephane Maarek
-- **Pluralsight** — Lo trinh hoc AWS
+### Khóa học video
+- **AWS Skill Builder** — Khóa học miễn phí và trả phí từ AWS
+- **A Cloud Guru** — Khóa học SAA-C03 toàn diện
+- **Udemy** — Khóa học AWS của Stephane Maarek
+- **Pluralsight** — Lộ trình học AWS
 
-### Bai thuc hanh
-- **AWS Skill Builder Labs** — Bai tap thuc hanh chinh thuc AWS
-- **A Cloud Guru Playground** — Moi truong AWS sandbox
-- **CloudAcademy** — Labs tuong tac va danh gia
+### Bài thực hành
+- **AWS Skill Builder Labs** — Bài tập thực hành chính thức AWS
+- **A Cloud Guru Playground** — Môi trường AWS sandbox
+- **CloudAcademy** — Labs tương tác và đánh giá
 
-## AWS Blogs va Tin tuc
+## AWS Blogs và Tin tức
 
-### Blogs AWS chinh thuc
+### Blogs AWS chính thức
 - [AWS Architecture Blog](https://aws.amazon.com/blogs/architecture/)
 - [AWS Security Blog](https://aws.amazon.com/blogs/security/)
 - [AWS Cost Management Blog](https://aws.amazon.com/blogs/aws-cost-management/)
 - [AWS Compute Blog](https://aws.amazon.com/blogs/compute/)
 
-### Cong dong
-- **AWS re:Post** — Nen tang Q&A cong dong
-- **Reddit r/aws** — Cong dong AWS tich cuc
-- **Medium AWS Collections** — Bai viet ky thuat
+### Cộng đồng
+- **AWS re:Post** — Nền tảng Q&A cộng đồng
+- **Reddit r/aws** — Cộng đồng AWS tích cực
+- **Medium AWS Collections** — Bài viết kỹ thuật
 
-## Tai nguyen AWS mien phi
+## Tài nguyên AWS miễn phí
 
 ### AWS Free Tier
-- 12 thang dich vu mien phi cho tai khoan moi
-- Dich vu luon mien phi (Lambda, DynamoDB, v.v.)
-- Dich vu thu nghiem trong thoi gian nhat dinh
+- 12 tháng dịch vụ miễn phí cho tài khoản mới
+- Dịch vụ luôn miễn phí (Lambda, DynamoDB, v.v.)
+- Dịch vụ thử nghiệm trong thời gian nhất định
 
-### Cong cu va May tinh
-- **AWS Pricing Calculator** — Uoc tinh chi phi
-- **AWS Well-Architected Tool** — Danh gia kien truc
-- **AWS Trusted Advisor** — Khuyen nghi toi uu
+### Công cụ và Máy tính
+- **AWS Pricing Calculator** — Ước tính chi phí
+- **AWS Well-Architected Tool** — Đánh giá kiến trúc
+- **AWS Trusted Advisor** — Khuyến nghị tối ưu
 
-## Dang ky thi
+## Đăng ký thi
 
 ### Pearson VUE
-- **Online Proctored** — Thi tai nha
-- **Test Centers** — Dia diem thi truc tiep
-- **Gia:** $150 USD
-- **Chinh sach thi lai:** Cho 14 ngay
+- **Online Proctored** — Thi tại nhà
+- **Test Centers** — Địa điểm thi trực tiếp
+- **Giá:** $150 USD
+- **Chính sách thi lại:** Chờ 14 ngày
 
-## Ke hoach hoc 8 tuan
+## Kế hoạch học 8 tuần
 
-- Tuan 1-2: Domain 1 (Security) + hands-on labs
-- Tuan 3-4: Domain 2 (Resilience) + cau hoi thuc hanh
-- Tuan 5-6: Domain 3 (Performance) + Domain 4 (Cost)
-- Tuan 7: On lai diem yeu, cheat sheets
-- Tuan 8: De thi thu va on cuoi
+- Tuần 1-2: Domain 1 (Security) + hands-on labs
+- Tuần 3-4: Domain 2 (Resilience) + câu hỏi thực hành
+- Tuần 5-6: Domain 3 (Performance) + Domain 4 (Cost)
+- Tuần 7: Ôn lại điểm yếu, cheat sheets
+- Tuần 8: Đề thi thử và ôn cuối

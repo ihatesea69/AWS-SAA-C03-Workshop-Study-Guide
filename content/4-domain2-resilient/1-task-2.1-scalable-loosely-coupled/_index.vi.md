@@ -1,61 +1,61 @@
 +++
-title = "Task 2.1: Kien truc co kha nang mo rong va lien ket long leo"
+title = "Task 2.1: Kiến trúc có khả năng mở rộng và liên kết lỏng lẻo"
 date = 2025
 weight = 1
 chapter = false
 pre = "<b>4.1 </b>"
 +++
 
-## Ly thuyet
+## Lý thuyết
 
 ### Amazon API Gateway
-Dich vu quan ly day du de tao, xuat ban va quan ly REST, HTTP va WebSocket APIs.
+Dịch vụ quản lý đầy đủ để tạo, xuất bản và quản lý REST, HTTP và WebSocket APIs.
 
 ### Amazon SQS
-Dich vu hang doi tin nhan de tach roi cac thanh phan.
-- **Standard Queue:** At-least-once, throughput gan nhu khong gioi han
-- **FIFO Queue:** Exactly-once, thu tu nghiem ngat, 300 msg/s
+Dịch vụ hàng đợi tin nhắn để tách rời các thành phần.
+- **Standard Queue:** At-least-once, throughput gần như không giới hạn
+- **FIFO Queue:** Exactly-once, thứ tự nghiêm ngặt, 300 msg/s
 
-### Chien luoc Caching
+### Chiến lược Caching
 - ElastiCache (Redis/Memcached), CloudFront, API Gateway Caching, DAX
 
-### Kien truc Microservices
-- Workloads khong trang thai: Luu session ben ngoai (ElastiCache, DynamoDB)
-- Moi microservice so huu data store rieng
+### Kiến trúc Microservices
+- Workloads không trạng thái: Lưu session bên ngoài (ElastiCache, DynamoDB)
+- Mỗi microservice sở hữu data store riêng
 
-### Kien truc huong su kien
+### Kiến trúc hướng sự kiện
 - EventBridge, SNS, SQS + SNS Fan-out, Lambda Event Source Mappings
 
 ### Elastic Load Balancing
-- **ALB:** Layer 7, HTTP/HTTPS, dinh tuyen theo path/host
-- **NLB:** Layer 4, TCP/UDP, do tre cuc thap
-- **GLB:** Layer 3, cho thiet bi ao (firewall, IDS/IPS)
+- **ALB:** Layer 7, HTTP/HTTPS, định tuyến theo path/host
+- **NLB:** Layer 4, TCP/UDP, độ trễ cực thấp
+- **GLB:** Layer 3, cho thiết bị ảo (firewall, IDS/IPS)
 
-### Cong nghe Serverless
-- Lambda: Tinh toan huong su kien, toi da 15 phut
-- Fargate: Container serverless cho ECS va EKS
-- Step Functions: Dieu phoi workflows
+### Công nghệ Serverless
+- Lambda: Tính toán hướng sự kiện, tối đa 15 phút
+- Fargate: Container serverless cho ECS và EKS
+- Step Functions: Điều phối workflows
 
 ### Read Replicas
-- Aurora: Toi da 15 replicas
-- RDS khac: Toi da 5 replicas
-- Nhan ban bat dong bo
+- Aurora: Tối đa 15 replicas
+- RDS khác: Tối đa 5 replicas
+- Nhân bản bất đồng bộ
 
 ---
 
 ## Flashcards
 
-| # | Cau hoi | Tra loi |
+| # | Câu hỏi | Trả lời |
 |---|---------|---------|
-| 1 | SQS Standard vs FIFO khac nhau the nao? | Standard: at-least-once, khong dam bao thu tu. FIFO: exactly-once, thu tu nghiem ngat. |
-| 2 | Kich thuoc tin nhan SQS toi da? | 256 KB |
-| 3 | ALB vs NLB khac nhau the nao? | ALB: Layer 7, HTTP. NLB: Layer 4, TCP/UDP. |
-| 4 | Thoi gian thuc thi Lambda toi da? | 15 phut |
-| 5 | Aurora co bao nhieu read replicas? | Toi da 15 |
+| 1 | SQS Standard vs FIFO khác nhau thế nào? | Standard: at-least-once, không đảm bảo thứ tự. FIFO: exactly-once, thứ tự nghiêm ngặt. |
+| 2 | Kích thước tin nhắn SQS tối đa? | 256 KB |
+| 3 | ALB vs NLB khác nhau thế nào? | ALB: Layer 7, HTTP. NLB: Layer 4, TCP/UDP. |
+| 4 | Thời gian thực thi Lambda tối đa? | 15 phút |
+| 5 | Aurora có bao nhiêu read replicas? | Tối đa 15 |
 
 ---
 
-## Tai lieu tham khao
+## Tài liệu tham khảo
 
 - [Amazon SQS Developer Guide](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html)
 - [Elastic Load Balancing User Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html)

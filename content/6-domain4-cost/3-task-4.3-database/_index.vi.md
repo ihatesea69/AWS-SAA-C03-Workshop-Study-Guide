@@ -1,37 +1,37 @@
 +++
-title = "Task 4.3: Co so du lieu toi uu chi phi"
+title = "Task 4.3: Cơ sở dữ liệu tối ưu chi phí"
 date = 2025
 weight = 3
 chapter = false
 pre = "<b>6.3 </b>"
 +++
 
-## Ly thuyet
+## Lý thuyết
 
 ### DynamoDB vs RDS
-DynamoDB On-Demand: tra theo request, khong chi phi nhan roi. RDS: tra theo gio instance, chay 24/7.
+DynamoDB On-Demand: trả theo request, không chi phí nhàn rỗi. RDS: trả theo giờ instance, chạy 24/7.
 
 ### Aurora Serverless v2
-Tu dong mo rong, toi uu cho workloads khong du doan. Loai bo over-provisioning.
+Tự động mở rộng, tối ưu cho workloads không dự đoán. Loại bỏ over-provisioning.
 
-### Di chuyen CSDL
-DMS + SCT de chuyen tu Oracle sang Aurora/PostgreSQL, tiet kiem 80%+ chi phi licensing.
+### Di chuyển CSDL
+DMS + SCT để chuyển từ Oracle sang Aurora/PostgreSQL, tiết kiệm 80%+ chi phí licensing.
 
 ---
 
 ## Flashcards
 
-| # | Cau hoi | Tra loi |
+| # | Câu hỏi | Trả lời |
 |---|---------|---------|
-| 1 | DynamoDB On-Demand vs Provisioned? | On-Demand: tra theo request. Provisioned: chi dinh RCU/WCU. |
-| 2 | Tiet kiem bao nhieu khi chuyen Oracle sang Aurora? | 80%+ chi phi licensing |
-| 3 | Aurora read replicas co ton them storage khong? | Khong, chia se cung storage volume |
-| 4 | DMS la gi? | Database Migration Service |
-| 5 | Khi nao Aurora Serverless toi uu chi phi? | Workloads khong du doan hoac khong thuong xuyen |
+| 1 | DynamoDB On-Demand vs Provisioned? | On-Demand: trả theo request. Provisioned: chỉ định RCU/WCU. |
+| 2 | Tiết kiệm bao nhiêu khi chuyển Oracle sang Aurora? | 80%+ chi phí licensing |
+| 3 | Aurora read replicas có tốn thêm storage không? | Không, chia sẻ cùng storage volume |
+| 4 | DMS là gì? | Database Migration Service |
+| 5 | Khi nào Aurora Serverless tối ưu chi phí? | Workloads không dự đoán hoặc không thường xuyên |
 
 ---
 
-## Tai lieu tham khao
+## Tài liệu tham khảo
 
 - [Amazon RDS Pricing](https://aws.amazon.com/rds/pricing/)
 - [Amazon DynamoDB Pricing](https://aws.amazon.com/dynamodb/pricing/)

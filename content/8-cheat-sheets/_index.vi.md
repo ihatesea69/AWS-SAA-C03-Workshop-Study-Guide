@@ -1,127 +1,127 @@
 +++
-title = "Cheat Sheets va Flashcards"
+title = "Cheat Sheets và Flashcards"
 date = 2025
 weight = 8
 chapter = false
 pre = "<b>8. </b>"
 +++
 
-## Domain 1: Thiet ke kien truc bao mat (30%) — Cheat Sheet
+## Domain 1: Thiết kế kiến trúc bảo mật (30%) — Cheat Sheet
 
-**Cay quyet dinh IAM:**
-- Can thong tin xac thuc tam thoi? -> IAM Roles + STS
-- Can truy cap cross-account? -> IAM Role voi trust policy
-- Can gioi han toan to chuc? -> SCPs
-- Can federate corporate users? -> IAM Identity Center + SAML 2.0
-- Can web identity federation? -> Cognito
+**Cây quyết định IAM:**
+- Cần thông tin xác thực tạm thời? -> IAM Roles + STS
+- Cần truy cập cross-account? -> IAM Role với trust policy
+- Cần giới hạn toàn tổ chức? -> SCPs
+- Cần federate corporate users? -> IAM Identity Center + SAML 2.0
+- Cần web identity federation? -> Cognito
 
-**Gioi han chinh:**
-- IAM policies moi user: 10 managed policies
-- STS session mac dinh: 1 gio (15 phut - 12 gio)
-- SCPs: KHONG cap quyen, chi gioi han
+**Giới hạn chính:**
+- IAM policies mỗi user: 10 managed policies
+- STS session mặc định: 1 giờ (15 phút - 12 giờ)
+- SCPs: KHÔNG cấp quyền, chỉ giới hạn
 
-**Ma hoa:**
-- Tai cho: KMS (SSE-KMS, SSE-S3), CloudHSM
-- Khi truyen: ACM (TLS/SSL), VPN
-- Xoay vong khoa: KMS tu dong hang nam cho CMKs
-- Chung chi ACM cong khai: Mien phi, tu dong gia han
+**Mã hóa:**
+- Tại chỗ: KMS (SSE-KMS, SSE-S3), CloudHSM
+- Khi truyền: ACM (TLS/SSL), VPN
+- Xoay vòng khóa: KMS tự động hàng năm cho CMKs
+- Chứng chỉ ACM công khai: Miễn phí, tự động gia hạn
 
-**Bao mat mang:**
-- Security Groups: Stateful, chi allow, cap instance
-- NACLs: Stateless, allow+deny, cap subnet
-- WAF: Layer 7 (SQL injection, XSS) tren ALB/CloudFront/API Gateway
-- Shield Standard: Mien phi DDoS (L3/L4). Advanced: $3K/thang
+**Bảo mật mạng:**
+- Security Groups: Stateful, chỉ allow, cấp instance
+- NACLs: Stateless, allow+deny, cấp subnet
+- WAF: Layer 7 (SQL injection, XSS) trên ALB/CloudFront/API Gateway
+- Shield Standard: Miễn phí DDoS (L3/L4). Advanced: $3K/tháng
 
 ---
 
-## Domain 2: Thiet ke kien truc phuc hoi (26%) — Cheat Sheet
+## Domain 2: Thiết kế kiến trúc phục hồi (26%) — Cheat Sheet
 
-**Chon chien luoc DR:**
+**Chọn chiến lược DR:**
 
-| RPO/RTO | Chien luoc | Chi phi |
+| RPO/RTO | Chiến lược | Chi phí |
 |---------|------------|---------|
-| Gio | Backup and Restore | $ |
-| Phut | Pilot Light | $$ |
-| Giay-Phut | Warm Standby | $$$ |
-| Gan bang 0 | Active-Active | $$$$ |
+| Giờ | Backup and Restore | $ |
+| Phút | Pilot Light | $$ |
+| Giây-Phút | Warm Standby | $$$ |
+| Gần bằng 0 | Active-Active | $$$$ |
 
-**Gioi han chinh:**
-- SQS message: 256 KB (Extended Client cho lon hon)
-- SQS FIFO: 300 msg/s (3,000 voi batching)
-- Lambda max: 15 phut
+**Giới hạn chính:**
+- SQS message: 256 KB (Extended Client cho lớn hơn)
+- SQS FIFO: 300 msg/s (3,000 với batching)
+- Lambda max: 15 phút
 - Aurora replicas: 15
 - RDS replicas: 5
 
-**Quyet dinh Scaling:**
-- Traffic du doan? -> Scheduled Scaling
-- Duy tri metric target? -> Target Tracking
-- Nguong bien dong? -> Step Scaling
-- Dua tren ML? -> Predictive Scaling
+**Quyết định Scaling:**
+- Traffic dự đoán? -> Scheduled Scaling
+- Duy trì metric target? -> Target Tracking
+- Ngưỡng biến động? -> Step Scaling
+- Dựa trên ML? -> Predictive Scaling
 
-**Chon Load Balancer:**
+**Chọn Load Balancer:**
 - HTTP/HTTPS? -> ALB
-- TCP/UDP hoac static IP? -> NLB
+- TCP/UDP hoặc static IP? -> NLB
 - Third-party appliances? -> GLB
 
 ---
 
-## Domain 3: Kien truc hieu suat cao (24%) — Cheat Sheet
+## Domain 3: Kiến trúc hiệu suất cao (24%) — Cheat Sheet
 
-**Chon luu tru:**
+**Chọn lưu trữ:**
 
-| Can | Dich vu |
+| Cần | Dịch vụ |
 |-----|---------|
 | Objects, web content | S3 |
 | Boot volumes, databases | EBS |
-| File Linux chia se | EFS |
-| File Windows chia se | FSx for Windows |
+| File Linux chia sẻ | EFS |
+| File Windows chia sẻ | FSx for Windows |
 | HPC, ML | FSx for Lustre |
 | Hybrid | Storage Gateway |
 
 **EBS:**
-- gp3: 3,000 IOPS co ban, toi da 16,000
-- io2 Block Express: Toi da 256,000 IOPS
+- gp3: 3,000 IOPS cơ bản, tối đa 16,000
+- io2 Block Express: Tối đa 256,000 IOPS
 - st1: Throughput HDD (big data)
-- sc1: Cold HDD (re nhat)
+- sc1: Cold HDD (rẻ nhất)
 
-**Chon Database:**
-- Relational hieu suat cao? -> Aurora
-- Relational tieu chuan? -> RDS
+**Chọn Database:**
+- Relational hiệu suất cao? -> Aurora
+- Relational tiêu chuẩn? -> RDS
 - Key-value, serverless? -> DynamoDB
 - In-memory cache? -> ElastiCache Redis
 - Graph? -> Neptune
 
 **Caching:**
 - DynamoDB? -> DAX (microseconds)
-- Tong quat? -> ElastiCache Redis (persistence, replication)
-- Don gian? -> ElastiCache Memcached (multi-threaded)
+- Tổng quát? -> ElastiCache Redis (persistence, replication)
+- Đơn giản? -> ElastiCache Memcached (multi-threaded)
 
 ---
 
-## Domain 4: Toi uu chi phi (20%) — Cheat Sheet
+## Domain 4: Tối ưu chi phí (20%) — Cheat Sheet
 
-**Chon EC2:**
-- On dinh 24/7? -> Reserved hoac Savings Plans (giam 72%)
-- Cam ket linh hoat? -> Compute Savings Plans
-- Batch chiu loi? -> Spot (giam 90%)
-- Ngan han, khong du doan? -> On-Demand
+**Chọn EC2:**
+- Ổn định 24/7? -> Reserved hoặc Savings Plans (giảm 72%)
+- Cam kết linh hoạt? -> Compute Savings Plans
+- Batch chịu lỗi? -> Spot (giảm 90%)
+- Ngắn hạn, không dự đoán? -> On-Demand
 
-**Toi uu S3:**
-- Dung lifecycle policies de chuyen storage classes
-- Glacier Deep Archive: $0.00099/GB/thang (re nhat)
-- Gateway Endpoints cho S3: Mien phi (tranh phi NAT Gateway)
-- Intelligent-Tiering: Tu dong chuyen theo access patterns
+**Tối ưu S3:**
+- Dùng lifecycle policies để chuyển storage classes
+- Glacier Deep Archive: $0.00099/GB/tháng (rẻ nhất)
+- Gateway Endpoints cho S3: Miễn phí (tránh phí NAT Gateway)
+- Intelligent-Tiering: Tự động chuyển theo access patterns
 
-**Tiet kiem mang:**
-- Truy cap S3/DynamoDB? -> Gateway Endpoint (mien phi)
-- It VPCs? -> VPC Peering (khong phi hang gio)
-- Nhieu VPCs? -> Transit Gateway
-- Dev/test NAT? -> NAT Instance (~$3.80/thang vs $32/thang)
-- Content delivery? -> CloudFront (re hon S3 truc tiep)
+**Tiết kiệm mạng:**
+- Truy cập S3/DynamoDB? -> Gateway Endpoint (miễn phí)
+- Ít VPCs? -> VPC Peering (không phí hàng giờ)
+- Nhiều VPCs? -> Transit Gateway
+- Dev/test NAT? -> NAT Instance (~$3.80/tháng vs $32/tháng)
+- Content delivery? -> CloudFront (rẻ hơn S3 trực tiếp)
 
-**So lieu chinh:**
-- Du lieu vao: Mien phi
-- Cung AZ (private IP): Mien phi
+**Số liệu chính:**
+- Dữ liệu vào: Miễn phí
+- Cùng AZ (private IP): Miễn phí
 - Cross-AZ: $0.01/GB
 - Cross-Region: $0.02/GB
-- Internet ra: $0.09/GB (10 TB dau)
+- Internet ra: $0.09/GB (10 TB đầu)

@@ -1,48 +1,48 @@
 +++
-title = "Task 3.5: Nhap va chuyen doi du lieu hieu suat cao"
+title = "Task 3.5: Nhập và chuyển đổi dữ liệu hiệu suất cao"
 date = 2025
 weight = 5
 chapter = false
 pre = "<b>5.5 </b>"
 +++
 
-## Ly thuyet
+## Lý thuyết
 
 ### Amazon Kinesis
-- **Data Streams:** Nhap du lieu thoi gian thuc, quan ly shards thu cong
-- **Data Firehose:** Gan thoi gian thuc, tu dong mo rong, giao den S3/Redshift
+- **Data Streams:** Nhập dữ liệu thời gian thực, quản lý shards thủ công
+- **Data Firehose:** Gần thời gian thực, tự động mở rộng, giao đến S3/Redshift
 
 ### AWS Glue
-ETL serverless. Data Catalog, Crawlers, Spark ETL jobs. Chuyen doi CSV/JSON sang Parquet.
+ETL serverless. Data Catalog, Crawlers, Spark ETL jobs. Chuyển đổi CSV/JSON sang Parquet.
 
 ### Amazon Athena
-Truy van SQL serverless tren S3. Tra phi theo TB quet. Tot nhat voi Parquet/ORC.
+Truy vấn SQL serverless trên S3. Trả phí theo TB quét. Tốt nhất với Parquet/ORC.
 
 ### AWS Lake Formation
-Xay dung data lake tren S3 voi kiem soat truy cap tap trung, quyen cap cot/hang.
+Xây dựng data lake trên S3 với kiểm soát truy cập tập trung, quyền cấp cột/hàng.
 
 ### Amazon QuickSight
 BI serverless. Dashboards, SPICE engine, ML insights.
 
-### Dich vu truyen du lieu
-- **DataSync:** Truyen du lieu tu dong giua on-premises va AWS
+### Dịch vụ truyền dữ liệu
+- **DataSync:** Truyền dữ liệu tự động giữa on-premises và AWS
 - **Snow Family:** Snowcone (8-14 TB), Snowball Edge (80 TB), Snowmobile (100 PB)
 
 ---
 
 ## Flashcards
 
-| # | Cau hoi | Tra loi |
+| # | Câu hỏi | Trả lời |
 |---|---------|---------|
-| 1 | Kinesis Streams vs Firehose? | Streams: thoi gian thuc, shards thu cong. Firehose: gan thoi gian thuc, tu dong. |
-| 2 | Glue lam gi? | ETL serverless voi Data Catalog va Crawlers |
-| 3 | Dinh dang tot nhat cho Athena? | Parquet hoac ORC (columnar) |
-| 4 | Lake Formation cung cap gi? | Kiem soat truy cap tap trung cho data lake, quyen cap cot |
-| 5 | Khi nao dung Snowball? | Di chuyen du lieu lon (TB-PB) khi mang qua cham |
+| 1 | Kinesis Streams vs Firehose? | Streams: thời gian thực, shards thủ công. Firehose: gần thời gian thực, tự động. |
+| 2 | Glue làm gì? | ETL serverless với Data Catalog và Crawlers |
+| 3 | Định dạng tốt nhất cho Athena? | Parquet hoặc ORC (columnar) |
+| 4 | Lake Formation cung cấp gì? | Kiểm soát truy cập tập trung cho data lake, quyền cấp cột |
+| 5 | Khi nào dùng Snowball? | Di chuyển dữ liệu lớn (TB-PB) khi mạng quá chậm |
 
 ---
 
-## Tai lieu tham khao
+## Tài liệu tham khảo
 
 - [Amazon Kinesis Documentation](https://docs.aws.amazon.com/kinesis/)
 - [AWS Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)

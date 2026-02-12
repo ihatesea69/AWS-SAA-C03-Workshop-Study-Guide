@@ -1,28 +1,28 @@
 +++
-title = "Domain 2: Thiet ke kien truc co kha nang phuc hoi"
+title = "Domain 2: Thiết kế kiến trúc có khả năng phục hồi"
 date = 2025
 weight = 4
 chapter = true
 pre = "<b>4. </b>"
 +++
 
-# Domain 2: Thiet ke kien truc co kha nang phuc hoi
+# Domain 2: Thiết kế kiến trúc có khả năng phục hồi
 
-## Trong so: 26% noi dung tinh diem
+## Trọng số: 26% nội dung tính điểm
 
-Domain nay bao gom thiet ke kien truc co kha nang mo rong, lien ket long leo, san sang cao va chiu loi tren AWS.
+Domain này bao gồm thiết kế kiến trúc có khả năng mở rộng, liên kết lỏng lẻo, sẵn sàng cao và chịu lỗi trên AWS.
 
-## Cac Task Statement
+## Các Task Statement
 
-| Task | Mo ta |
+| Task | Mô tả |
 |------|-------|
-| Task 2.1 | Thiet ke kien truc co kha nang mo rong va lien ket long leo |
-| Task 2.2 | Thiet ke kien truc san sang cao va chiu loi |
+| Task 2.1 | Thiết kế kiến trúc có khả năng mở rộng và liên kết lỏng lẻo |
+| Task 2.2 | Thiết kế kiến trúc sẵn sàng cao và chịu lỗi |
 
-## Khai niem chinh
+## Khái niệm chính
 
-- Mo rong ngang vs mo rong doc
-- Lien ket long leo qua queues va events
-- Chien luoc DR (Backup/Restore, Pilot Light, Warm Standby, Active-Active)
-- RPO va RTO
-- Kien truc Multi-AZ va multi-Region
+- Mở rộng ngang vs mở rộng dọc
+- Liên kết lỏng lẻo qua queues và events
+- Chiến lược DR (Backup/Restore, Pilot Light, Warm Standby, Active-Active)
+- RPO và RTO
+- Kiến trúc Multi-AZ và multi-Region
