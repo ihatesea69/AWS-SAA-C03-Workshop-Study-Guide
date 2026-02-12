@@ -1,0 +1,14 @@
+{
+  "name": "aws-saa-c03-workshop-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0",
+    "fast-check": "^3.19.0",
+    "@fast-check/vitest": "^0.1.0",
+    "@iarna/toml": "^2.2.5"
+  }
+}

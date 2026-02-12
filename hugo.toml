@@ -1,0 +1,30 @@
+baseURL = "https://ihatesea69.github.io/AWS-SAA-C03-Workshop-Study-Guide/"
+languageCode = "en-us"
+title = "AWS SAA-C03 Workshop Study Guide"
+theme = "hugo-theme-learn"
+
+[params]
+  themeVariant = "workshop"
+  disableBreadcrumb = false
+  disableNextPrev = false
+  editURL = "https://github.com/ihatesea69/AWS-SAA-C03-Workshop-Study-Guide/edit/main/content/"
+  description = "Comprehensive AWS Solutions Architect Associate (SAA-C03) study guide — Theory, Hands-on Labs, Mock Exams, Cheat Sheets, Flashcards"
+  author = "ihatesea69"
+
+[languages]
+  [languages.en]
+    title = "AWS SAA-C03 Workshop Study Guide"
+    weight = 1
+    languageName = "English"
+  [languages.vi]
+    title = "Huong dan on thi AWS SAA-C03"
+    weight = 2
+    languageName = "Tieng Viet"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
